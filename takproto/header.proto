@@ -1,0 +1,21 @@
+
+syntax = "proto3";
+option optimize_for = LITE_RUNTIME
+package atakmap.commoncommo.protobuf.v1;
+
+/// \ingroup gz.msgs
+/// \interface Header 
+/// \brief General information included by many messages
+
+import "time.proto";
+
+message Header
+{
+  message Map {
+    string key = 1;
+    repeated string value = 2;
+  }
+
+  Time stamp           = 1;
+  repeated Map data             = 2;
+} 

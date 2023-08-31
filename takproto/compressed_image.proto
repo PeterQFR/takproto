@@ -1,0 +1,29 @@
+syntax = "proto3";
+package atakmap.commoncommo.protobuf.v1;
+
+/// \interface CompressedImage
+/// \brief Message for an image
+
+import "header.proto";
+
+/// \brief Possible pixel formats.
+/// This list should match gz::common::Image::PixelFormatType
+enum CompressionFormat
+{
+  UNKNOWN_PIXEL_FORMAT = 0;
+  JPEG = 1;
+  PNG = 2;
+  TIFF = 3;
+}
+
+message Image
+{
+  /// \brief Optional header data
+  Header header        = 1;
+
+  /// \brief Enum Compression type
+  CompressionFormat compression_format  = 2;
+
+  /// \brief compressed data buffer
+  repeated uint8 data        = 3;
+}
