@@ -22,6 +22,7 @@ be used on a single broadcast channel, simplifying transmission. This may or may
 the best solution but is effectively the mechanism used by ATAK. 
 
 Library implementations will need to basically check for the existence of various 
-fields to determine what to do with a particular. This may be platform and vendor 
-specific.
+fields in the detail part of the message to determine what to do with a particular message. 
+This may be platform and vendor specific, and may also require information from the event and point
+parts of the message.
 
