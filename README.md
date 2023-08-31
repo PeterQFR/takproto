@@ -15,6 +15,15 @@ Whilst this is presented as a google protobuf (tak message v1), it also provides
 necessary defintion for implementation of tak message v0, the xml implementation. 
 the Protobuf implementation is the preferred method.
 
+## Licence
+
+This definition is GPL. the original ATAK release was GPL licenced which means for the time being that
+this needs to be GPL licenced. an APACHE licence makes more sense for message definitions and we 
+are requesting that from the ATAK CIV. We will update as we receive permission. If not we will redefine
+the COT elements under the APACHE licence in a different repository. That means any drivers using these 
+definitions for serialisation will need to be GPL licenced. :-)
+
+
 ## Libraries
 
 As this system only defines an "Uber Message" for all your interagent needs, it can
