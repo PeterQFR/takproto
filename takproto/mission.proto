@@ -8,6 +8,13 @@ package atakmap.commoncommo.protobuf.v1;
 // to the message format will be rejected and fall back to opaque
 // XML representationi
 
+enum TaskType{
+    UNKNOWN_TASK_TYPE=0;
+    WAYPOINT_TYPE=1;
+    WAYPOINT_TYPE2=2;
+    WAYPOINT_TYPE3=3;
+};
+
 message Position {
     double latitude = 1;
     double longitude = 2;
@@ -17,7 +24,7 @@ message Position {
 message Mission {
 
     message MissionItem {
-        uint32 type = 1;
+        TaskType type = 1;
         repeated Position position = 2;
         repeated float parameter = 3; // additional parameters to describe the task -- taks specific
     }
