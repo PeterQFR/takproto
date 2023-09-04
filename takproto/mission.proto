@@ -9,9 +9,9 @@ package atakmap.commoncommo.protobuf.v1;
 // XML representationi
 
 message Position {
-    float64 latitude = 1;
-    float64 longitude = 2;
-    float64 height = 3;
+    double latitude = 1;
+    double longitude = 2;
+    double height = 3;
 }
 
 message Mission {
@@ -19,7 +19,7 @@ message Mission {
     message MissionItem {
         uint32 type = 1;
         repeated Position position = 2;
-        repeated float32 parameter = 3; // additional parameters to describe the task -- taks specific
+        repeated float parameter = 3; // additional parameters to describe the task -- taks specific
     }
 
     repeated MissionItem tasks = 1;

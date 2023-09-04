@@ -11,7 +11,6 @@ enum CommandType
     START_MISSION = 3; //Params []
 }
 message Command {
-     // Endpoint is optional; if missing/empty do not populate.
      CommandType command = 1;           // command identifier=
      repeated double params = 2;           // list of parameters values 
 }
