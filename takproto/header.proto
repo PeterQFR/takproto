@@ -1,6 +1,6 @@
 
 syntax = "proto3";
-option optimize_for = LITE_RUNTIME
+option optimize_for = LITE_RUNTIME;
 package atakmap.commoncommo.protobuf.v1;
 
 /// \ingroup gz.msgs

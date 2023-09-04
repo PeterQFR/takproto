@@ -1,4 +1,5 @@
 syntax = "proto3";
+option optimize_for = LITE_RUNTIME;
 package atakmap.commoncommo.protobuf.v1;
 
 /// \interface CompressedImage
@@ -10,13 +11,13 @@ import "header.proto";
 /// This list should match gz::common::Image::PixelFormatType
 enum CompressionFormat
 {
-  UNKNOWN_PIXEL_FORMAT = 0;
+  UNKNOWN_COMPRESSED_IMAGE_FORMAT = 0;
   JPEG = 1;
   PNG = 2;
   TIFF = 3;
 }
 
-message Image
+message CompressedImage
 {
   /// \brief Optional header data
   Header header        = 1;
@@ -25,5 +26,5 @@ message Image
   CompressionFormat compression_format  = 2;
 
   /// \brief compressed data buffer
-  repeated uint8 data        = 3;
+  bytes data        = 3;
 }

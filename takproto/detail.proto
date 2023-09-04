@@ -86,7 +86,7 @@ message Detail {
     Mission mission = 9;
     
     // <image>
-    CompressedImage image = 10
+    CompressedImage image = 10;
 
     // <image map>
     Image imagemap = 11;
