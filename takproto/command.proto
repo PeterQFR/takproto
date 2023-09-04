@@ -3,12 +3,15 @@ option optimize_for = LITE_RUNTIME;
 
 package atakmap.commoncommo.protobuf.v1;
 
-// All items are required unless otherwise noted!
-// "required" means if they are missing on send, the conversion
-// to the message format will be rejected and fall back to opaque
-// XML representation
+enum CommandType
+{
+    UNKNOWN_COMMAND =0;
+    START_AUTONOMY = 1; //Params [lat, lon, height]
+    STOP_AUTONOMY = 2; //Params  []
+    START_MISSION = 3; //Params []
+}
 message Command {
      // Endpoint is optional; if missing/empty do not populate.
-     string endpoint = 1;           // endpoint=
-     string callsign = 2;           // callsign=
+     CommandType command = 1;           // command identifier=
+     repeated double params = 2;           // list of parameters values 
 }
