@@ -44,7 +44,7 @@ message Image
   uint32 height        = 3;
 
   /// \brief Full row length in bytes
-  uint32 channels      = 4;
+  uint32 resolution      = 4;
 
   /// \brief Actual data, size if (width * rows* channels)
   bytes data           = 5;
