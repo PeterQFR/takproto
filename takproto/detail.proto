@@ -89,5 +89,5 @@ message Detail {
     CompressedImage image = 10;
 
     // <image map>
-    Image imagemap = 11;
+    MapImage imagemap = 11;
 }

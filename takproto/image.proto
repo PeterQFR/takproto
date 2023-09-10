@@ -32,9 +32,9 @@ enum PixelFormatType
   BAYER_GRBG8 = 18;
 }
 
-message Image
+message MapImage
 {
-  /// \brief Optional header data
+  /// brief Optional header data
   Header header        = 1;
 
   /// \brief Image width (number of columns)
@@ -43,11 +43,13 @@ message Image
   /// \brief Image height (number of rows)
   uint32 height        = 3;
 
-  /// \brief Full row length in bytes
+  /// \brief resolution of pixel
   uint32 resolution      = 4;
 
   /// \brief Actual data, size if (width * rows* channels)
   bytes data           = 5;
+
+  uint32 rowstep = 7 //width*sizeofdata
 
   /// \brief Pixel format type.
   PixelFormatType pixel_format_type = 6;

@@ -5,16 +5,18 @@ package atakmap.commoncommo.protobuf.v1;
 
 
 // All items are required unless otherwise noted!
-// "required" means if they are missing on send, the conversion
+// "required" means if they are missing on send he conversion
 // to the message format will be rejected and fall back to opaque
 // XML representation
 enum DiagnosticBitfield{
+  UNKNOWN = 0;
   SLAM = 1;
   BATTERY = 2;
   PERCEPTION = 4;
+  // 8 - 2^32
 }
 
 message Status {
-     uint32 battery = 1;           // battery=
+     uint32 battery = 1;           // battery = 
      uint32 diagnostic_bitfield = 2;
 }
