@@ -4,7 +4,7 @@ option optimize_for = LITE_RUNTIME;
 import "cotevent.proto";
 import "takcontrol.proto";
 
-package atakmap.commoncommo.protobuf.v1;
+package atakmap.commoncommo.protobuf.v1.ichor;
 
 // Top level message sent for TAK Messaging Protocol Version 1.
 message TakMessage {

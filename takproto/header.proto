@@ -1,7 +1,7 @@
 
 syntax = "proto3";
 option optimize_for = LITE_RUNTIME;
-package atakmap.commoncommo.protobuf.v1;
+package atakmap.commoncommo.protobuf.v1.ichor;
 
 /// \ingroup gz.msgs
 /// \interface Header 

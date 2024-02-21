@@ -1,5 +1,5 @@
 syntax = "proto3";
-package atakmap.commoncommo.protobuf.v1;
+package atakmap.commoncommo.protobuf.v1.ichor;
 
 /// \ingroup gz.msgs
 /// \interface Time

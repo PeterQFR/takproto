@@ -1,6 +1,6 @@
 syntax = "proto3";
 option optimize_for = LITE_RUNTIME;
-package atakmap.commoncommo.protobuf.v1;
+package atakmap.commoncommo.protobuf.v1.ichor;
 
 /// \interface Image
 /// \brief Message for an image
@@ -49,7 +49,7 @@ message MapImage
   /// \brief Actual data, size if (width * rows* channels)
   bytes data           = 5;
 
-  uint32 rowstep = 7 //width*sizeofdata
+  uint32 rowstep = 7; //width*sizeofdata
 
   /// \brief Pixel format type.
   PixelFormatType pixel_format_type = 6;
